@@ -1,0 +1,34 @@
+/* .todo-section{
+    margin: 5px;
+    border: 5px solid;
+} */
+
+.home-section{
+    margin: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 20px 0;
+    
+}
+
+.table-content th{
+    font-weight: 400;
+}
+
+.task-title{
+    text-align: left;
+}
+
+.pagination{
+    margin-bottom: 20px;
+}
+
+.page-link{
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}

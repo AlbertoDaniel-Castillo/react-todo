@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import useFetch from "./components/useFetch";
+import Todos from "./components/Todos";
 
-function App() {
+
+const FETCH_URL = "https://jsonplaceholder.typicode.com/todos";
+
+export default function App() {
+  const {data, loading, error} = useFetch(FETCH_URL);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      {loading && <h1>Loading</h1>}
+      {error && <h1>Error</h1>}
+      {data && <Todos data={data} />}
+    </div>  
   );
 }
-
-export default App;
